@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
- <datasource enabled="true" jndi-name="java:jboss/datasources/apiman-manager" pool-name="apiman-manager-api" use-java-context="true">
+<datasource enabled="true" jndi-name="java:jboss/datasources/apiman-manager" pool-name="apiman-manager-api" use-java-context="true">
                     <connection-url>jdbc:postgresql://localhost:5432/ApiManagerDS</connection-url>
                     <driver>postgresql</driver>
                     <pool>
