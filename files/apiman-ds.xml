@@ -9,7 +9,7 @@
                     </pool>
                     <security>
                         <user-name>apiman</user-name>
-                        <password>apiman</password>
+                        <password>apiman_p123</password>
                     </security>
   </datasource>
 </datasources>
