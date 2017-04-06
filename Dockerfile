@@ -14,7 +14,7 @@ ADD files/* /opt/jboss/wildfly/standalone/deployments/
 # Change standalone-apiman.xml for postgres
 RUN  sed -i -e 's/H2Dialect/PostgreSQLDialect/g' $JBOSS_HOME/standalone/configuration/standalone-apiman.xml
 # Apiman properties
-ADD apiman.properties /opt/jboss/wildfly/standalone/configuration/
+ADD apiman.properties $JBOSS_HOME/standalone/configuration/
 #RUN  sed -i -e 's/H2Dialect/PostgreSQLDialect/g' $JBOSS_HOME/standalone/configuration/apiman.properties
 
 
