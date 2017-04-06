@@ -1,6 +1,6 @@
 FROM jboss/wildfly:9.0.2.Final
 
-ENV APIMAN_VERSION 1.2.1.Final
+ENV APIMAN_VERSION 1.2.9.Final
 
 RUN cd $JBOSS_HOME \
  && curl http://downloads.jboss.org/overlord/apiman/$APIMAN_VERSION/apiman-distro-wildfly9-$APIMAN_VERSION-overlay.zip -o apiman-distro-wildfly9-$APIMAN_VERSION-overlay.zip \
