@@ -3,7 +3,7 @@
   <datasource jndi-name="java:jboss/datasources/apiman-manager" pool-name="apiman-manager-api" enabled="true"
     use-java-context="true">
     <connection-url>jdbc:postgresql://localhost:5432/ApiManagerDS</connection-url>
-    <driver>postgresql-9.4-1201-jdbc41.jar</driver>
+    <driver>postgresql-9.3-1201-jdbc41.jar</driver>
      <pool>
                         <max-pool-size>30</max-pool-size>
                     </pool>
