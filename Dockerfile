@@ -16,6 +16,7 @@ RUN  sed -i -e 's/H2Dialect/PostgreSQLDialect/g' $JBOSS_HOME/standalone/configur
 # Apiman properties
 ADD apiman.properties $JBOSS_HOME/standalone/configuration/
 #RUN  sed -i -e 's/H2Dialect/PostgreSQLDialect/g' $JBOSS_HOME/standalone/configuration/apiman.properties
+RUN  rm -f $JBOSS_HOME/standalone/deployments/apiman-es.war
 
 
 ENTRYPOINT ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-c", "standalone-apiman.xml"]
