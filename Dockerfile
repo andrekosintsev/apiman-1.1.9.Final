@@ -9,13 +9,6 @@ RUN cd $JBOSS_HOME \
 
 RUN $JBOSS_HOME/bin/add-user.sh admin admin123! --silent
 
-# Postgres
-ENV DB_CONNECTOR_VERSION 9.4-1201-jdbc41
-RUN rm /opt/jboss/wildfly/standalone/deployments/apiman-ds.xml
-RUN mkdir -p /opt/jboss/wildfly/modules/system/layers/base/org/postgresql/jdbc/main; cd /opt/jboss/wildfly/modules/system/layers/base/org/postgresql/jdbc/main; curl -O http://central.maven.org/maven2/org/postgresql/postgresql/$DB_CONNECTOR_VERSION/postgresql-$DB_CONNECTOR_VERSION.jar
-ADD module.xml /opt/jboss/wildfly/modules/system/layers/base/org/postgresql/jdbc/main/
-
-
 # Add the postgres driver and datasource
 ADD files/* /opt/jboss/wildfly/standalone/deployments/
 # Change standalone-apiman.xml for postgres
